@@ -1,21 +1,27 @@
 # ElixirExercises
 
-**TODO: Add description**
+## Description
+This project returns a `map` containing a _word_ as a `key` and the _number of times_ that word appears in a text file as a `value`.
 
-## Installation
+## Running
+1. `iex -S mix`
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `elixir_exercises` to your list of dependencies in `mix.exs`:
+## WordCount
+2. `iex> WordCount.count("<file path>")`, 
+    for example: `iex()> WordCount.count("./text.txt")`
 
-```elixir
-def deps do
-  [
-    {:elixir_exercises, "~> 0.1.0"}
-  ]
-end
-```
+## FizzBuzz
+2. `iex> FizzBuzz(<a number>)`,
+    for example: `iex> FizzBuzz(15)`
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/elixir_exercises>.
-
+## MyList
+* `iex> MyList.each([<list>, <function>)`
+  for example: `iex> MyList.each(["joca", "bed"], fn x -> IO.puts(x) end)`
+* `iex> MyList.map([<list>, <function>)`
+  for example: `iex> MyList.map([1, 2, 3], fn x -> x * 2 end)`
+* `iex> MyList.reduce([<list>, <function>)`
+  for example: `iex> MyList.reduce([1, 2, 3], 0, fn x, acc -> x + acc end)`
+* `iex> MyList.each([<list>, <list>)`
+  for example: `iex> MyList.zip(["Agus", "Caleb", "Joca"], [:senior, :junior, :beginner])`
+* `iex> MyList.reduce([<list>, <list>, <function>)`
+  for example: `iex> MyList.zip_with([1, 2, 5, 6], [3, 4], fn x, y -> x + y end)`
