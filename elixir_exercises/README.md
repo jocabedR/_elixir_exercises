@@ -8,7 +8,7 @@ This project returns a `map` containing a _word_ as a `key` and the _number of t
 
 ## WordCount
 2. `iex> WordCount.count("<file path>")`, 
-    for example: `iex()> WordCount.count("./text.txt")`
+    for example: `iex()> WordCount.count("./lib/data/text.txt")`
 
 ## FizzBuzz
 2. `iex> FizzBuzz(<a number>)`,
@@ -25,3 +25,7 @@ This project returns a `map` containing a _word_ as a `key` and the _number of t
   for example: `iex> MyList.zip(["Agus", "Caleb", "Joca"], [:senior, :junior, :beginner])`
 * `iex> MyList.reduce([<list>, <list>, <function>)`
   for example: `iex> MyList.zip_with([1, 2, 5, 6], [3, 4], fn x, y -> x + y end)`
+
+## ChallengeCDMX
+1. 1st 
+

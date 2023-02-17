@@ -1,0 +1,4 @@
+%{
+  "libgraph": {:hex, :libgraph, "0.16.0", "3936f3eca6ef826e08880230f806bfea13193e49bf153f93edcf0239d4fd1d07", [:mix], [], "hexpm", "41ca92240e8a4138c30a7e06466acc709b0cbb795c643e9e17174a178982d6bf"},
+  "sweet_xml": {:hex, :sweet_xml, "0.7.3", "debb256781c75ff6a8c5cbf7981146312b66f044a2898f453709a53e5031b45b", [:mix], [], "hexpm", "e110c867a1b3fe74bfc7dd9893aa851f0eed5518d0d7cad76d7baafd30e4f5ba"},
+}
