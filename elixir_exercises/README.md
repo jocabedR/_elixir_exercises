@@ -33,4 +33,5 @@ This project returns a `map` containing a _word_ as a `key` and the _number of t
 
 ## ChallengeCDMX
 1. 1st Phase: `ChallengeCdmx.firstPhase()`
+2. 2nd Phase (just Graph creation): `ChallengeCdmx.secondPhase()`
 
