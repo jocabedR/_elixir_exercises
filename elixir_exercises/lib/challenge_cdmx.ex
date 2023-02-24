@@ -1,6 +1,15 @@
 defmodule ChallengeCdmx do
   import SweetXml
   import Graph
+
+  defmodule Line do
+    defstruct name: "", stations: []
+  end
+
+  defmodule Station do
+    defstruct name: "", coordinates: ""
+  end
+
   def getLines(doc) do
    doc
    |> xpath(~x"//Folder[name='Líneas de Metro']/Placemark/name/text()"l)
@@ -11,7 +20,7 @@ defmodule ChallengeCdmx do
     doc|> xpath(~x"//Folder[name='Líneas de Metro']/Placemark[name='#{line}']/LineString/coordinates/text()"s)
     |> String.replace("\n          ", "")
     |> String.split("  ", trim: true)
-    |> Enum.map(fn coord -> %{name: getStation(doc, coord), coordinates: coord} end)
+    |> Enum.map(fn coord -> %Station{name: getStation(doc, coord), coordinates: coord} end)
   end
 
   def getStation(doc, coordinate) do
@@ -22,7 +31,7 @@ defmodule ChallengeCdmx do
 
   def getLinesDescription(doc) do
     getLines(doc)
-    |> Enum.map(fn line -> %{name: line, stations: getLineDescription(doc, line)}end)
+    |> Enum.map(fn line -> %Line{name: line, stations: getLineDescription(doc, line)}end)
   end
 
   def firstPhase() do

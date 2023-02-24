@@ -32,6 +32,21 @@ This project returns a `map` containing a _word_ as a `key` and the _number of t
   for example: `iex> MyList.zip_with([1, 2, 5, 6], [3, 4], fn x, y -> x + y end)`
 
 ## ChallengeCDMX
-1. 1st Phase: `ChallengeCdmx.firstPhase()`
+2. 1st Phase: `ChallengeCdmx.firstPhase()`
 2. 2nd Phase (just Graph creation): `ChallengeCdmx.secondPhase()`
+
+## InvoiceValidator
+2. `InvoiceValidator.validate_dates(<Emition date>, <PAC date>)`,
+
+for example:
+```markdown
+iex> e = DateTime.from_naive!(~N[2023-02-24 07:05:00], "Mexico/General")
+#DateTime<2023-02-24 07:05:00-06:00 CST Mexico/General>
+iex> p = DateTime.from_naive!(~N[2023-02-24 07:00:00], "Mexico/General")
+#DateTime<2023-02-24 07:00:00-06:00 CST Mexico/General>
+iex> InvoiceValidator.validate_dates(e, p)                              
+:ok
+```
+
+3. Testing(in order): `mix test --trace --seed 0 test/invoice_validator_test.exs`
 

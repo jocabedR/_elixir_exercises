@@ -22,7 +22,9 @@ defmodule ElixirExercises.MixProject do
   defp deps do
     [
       {:sweet_xml, "~> 0.7.3"},
-      {:libgraph, "~> 0.16.0"}
+      {:libgraph, "~> 0.16.0"},
+      {:tz, "~> 0.24.0"},
+      {:tzdata, "~> 1.1"}
     ]
   end
 end
